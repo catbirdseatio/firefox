@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9fb;
+    padding: 1.875rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+logo-and-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    width: 80%;
+    margin: 2.5rem 0;
+}
+
+.firefox-logo {
+    width: 80px;
+    height: auto;
+}
+
+h1.brand {
+    font-size: 2.875rem;
+}
+
+search-wrapper {
+    position: sticky;
+    top: 0;
+    background-color: rgba(249, 249, 249, 0.95);
+    width: 100%;
+    height: 6.25rem;
+    padding: .9375rem 0;
+    z-index: 1;
+}
+
+search-wrapper form {
+    width: 38.75rem;
+    position: relative;
+    margin: auto;
+}
+
+search-wrapper img {
+    width: 1.5625rem;
+    position: absolute;
+    top: .6875rem;
+    left: .9375rem;
+}
+
+search-wrapper input[type='search'] {
+    width: 100%;
+    padding: .9375rem;
+    padding-left: 3.125rem;
+    height: 3.125rem;
+    border-radius: .5rem;
+    box-shadow: 0 .125 .375 rgba(58, 57, 68, 0.2);
+    border: none;
+    font-size:  .9375rem;
+}
+
+search-wrapper input[type='search']::placeholder {
+    color: #000;
+    opacity: 0.5;
+}
+
+search-wrapper input[type='search']:focus {
+    outline: 1px solid #0060DF;
+}
+
+section-wrapper {
+    width: 60.375rem;
+    padding: .625rem;
+}
+
+section-wrapper a {
+    text-decoration: none;
+    color:#0060DF;
+    font-size: .8125rem;
+}
+
+section-wrapper a:hover {
+    text-decoration: underline;
+}
+
+section-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+    font-size: 14px;
+}
+
+tile-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(5rem, 1fr));
+    grid-gap: .5rem;
+}
+
+tile-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+}
+
+tile-card:hover {
+    background-color: rgba(21, 20, 26, 0.1);
+}
+
+top-tile {
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.75rem 1.75rem .45rem 1.75rem;
+}
+
+top-tile img {
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+tile-footer {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-bottom: .25rem;
+}
+
+tile-footer a {
+    text-decoration: none;
+    color: #000;
+    font-size: .825rem;
+}
+
+tile-footer > .sponsored {
+    display: block;
+    color: #777;
+    font-size: .75rem;
+}
+
+.pocket-heading {
+    display: inline;
+    font-size: 1.1rem;
+    margin-right: .625rem;
+}
+
+card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 350px);
+    grid-gap: 1.5rem;
+    margin: 1.25rem 0;
+}
+
+card {
+    max-width: 18.75rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .125rem .375rem rgba(58, 57, 68, 0.2);
+    position: relative;
+}
+
+card img {
+    width: 100%;
+    border-radius: .5rem .5rem 0 0;
+}
+
+card-description {
+    display: block;
+    padding: .9375rem;
+}
+
+card-description h3 {
+    font-size: 1rem;
+    color: #777;
+    font-weight: normal;
+    margin-bottom: .625rem;
+}
+
+card-description a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+card-description a:hover {
+    color: #0060DF;
+}
+
+card-description a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+card-description p {
+    font-size: .875rem;
+    margin-top: .3125rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 62rem) {
+    search-wrapper form {
+        width: 35rem;
+    }
+
+    section-wrapper {
+        width: 45rem;
+    }
+
+    tile-card-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    footer ul, footer a {
+        font-size: .625rem;
+    } 
+}
+
+@media (max-width: 45rem) {
+    search-wrapper form {width: 22.5rem;}
+
+    section-wrapper {
+        width: 30.625rem;
+    }
+
+    tile-card-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 350px) {
+    search-wrapper form {width: 16rem;}
+
+    section-wrapper {
+        width: 16rem;
+    }
+
+    card-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    tile-card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer ul, footer a {
+        font-size: .12rem;
+    } 
+}
